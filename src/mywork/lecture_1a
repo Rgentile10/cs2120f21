@@ -107,7 +107,7 @@ follow example shows formally (in Lean).
 
 example : 1 = 1 := 
   eq.refl 2   -- Lean inferns T = ℕ from 1
-
+there is an error here above, we should switch the 2 with a 1
 /-
 Yay! We just constructed a formal proof: a
 mathematical object that certifies that 1=1. 
@@ -247,10 +247,8 @@ Theorem: 2 = 2.
 Proof: [If you take any Type, T, and any object, t, of that
 type, by the general equality theroem, eq.refl,  we can conlude that
 t = t. The axoim, ∀ {T : Type} (t : T), t = t, can be applied to t =2. 
-If the type, T, were natural numbers, and the value of that
-type is 2, we can apply the axiom to the argument
-values, ℕ and 2, to get back a *proof* of
-the proposition, 1 = 1. ]
+By the reflexive property of equality, if everything is equal to itself 
+then any instance of a particular thing is equal to itself. Thus, if we apply this axiom to 2, we can conclude that 2 ==2 is true. ]
 -/
 
 
