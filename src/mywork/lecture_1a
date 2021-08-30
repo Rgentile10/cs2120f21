@@ -258,6 +258,7 @@ Give, below, a formal statement and proof of
 the proposition, 2 = 2. (See above for a good
 example to follow!)
 -/
+example : 2 = 2:= eq.refl
 
 -- def proof_of_reflexivity   -- function name
     (T : Type)      -- first argument
