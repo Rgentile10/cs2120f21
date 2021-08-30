@@ -244,7 +244,13 @@ EXERCISES #1.
 Give a quasi-formal English language "proof" 
 of the proposition that 2 = 2.
 Theorem: 2 = 2.
-Proof: [your answer here]
+Proof: [If you take any Type, T, and any object, t, of that
+type, by the general equality theroem, eq.refl,  we can conlude that
+t = t. The axoim, ∀ {T : Type} (t : T), t = t, can be applied to t =2. 
+If the type, T, were natural numbers, and the value of that
+type is 2, we can apply the axiom to the argument
+values, ℕ and 2, to get back a *proof* of
+the proposition, 1 = 1. ]
 -/
 
 
@@ -255,8 +261,13 @@ the proposition, 2 = 2. (See above for a good
 example to follow!)
 -/
 
--- answer here
-
+-- def proof_of_reflexivity   -- function name
+    (T : Type)      -- first argument
+    (t : T)         -- second argument
+    : t = t         -- return type 
+    := eq.refl t    -- implementation
+#reduce proof_of_reflexivity ℕ 2
+return: 2 == 2
 
 /-
 EXERCISE #3.
